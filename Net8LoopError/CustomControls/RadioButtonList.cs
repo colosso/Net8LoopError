@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace Net8LoopError.CustomControls
 {
-    public class StrangeListControl : ComponentBase
+    public class RadioButtonList : ComponentBase
     {
 
         protected override void BuildRenderTree(RenderTreeBuilder builder)
@@ -25,7 +25,7 @@ namespace Net8LoopError.CustomControls
                 base.BuildRenderTree(builder);
                 builder.OpenElement(i++, "div");
 
-                builder.OpenComponent(i++, typeof(RadioButtonControl));
+                builder.OpenComponent(i++, typeof(RadioButton));
                 builder.AddAttribute(i++, "LabelText", item);
 
                 builder.CloseComponent();
